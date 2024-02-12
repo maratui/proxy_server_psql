@@ -15,10 +15,6 @@ ProxyServer::ProxyServer(char *argv[]) : filename_(argv[2]) {
 
   utils::CheckResult((client_listener_ = socket(AF_INET, SOCK_STREAM, 0)),
                      "socket");
-  utils::CheckResult(fcntl(client_listener_, F_SETFL, O_NONBLOCK), "fcntl");
-  utils::CheckResult(setsockopt(client_listener_, SOL_SOCKET, SO_REUSEADDR,
-                                &kOptVal, sizeof(kOptVal)),
-                     "setsockopt");
 
   str_iss >> client_port_number_;
   client_sockaddr_.sin_family = AF_INET;
@@ -83,10 +79,6 @@ void ProxyServer::AcceptConnection() {
   int socket{};
 
   utils::CheckResult((socket = accept(client_listener_, NULL, NULL)), "accept");
-  utils::CheckResult(fcntl(socket, F_SETFL, O_NONBLOCK), "fcntl");
-  utils::CheckResult(setsockopt(client_listener_, SOL_SOCKET, SO_REUSEADDR,
-                                &kOptVal, sizeof(kOptVal)),
-                     "setsockopt");
 
   clients_.push_back(new Client(socket, filename_));
 }

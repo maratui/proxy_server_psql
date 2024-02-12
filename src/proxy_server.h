@@ -24,7 +24,6 @@ class ProxyServer {
   void Exec();
 
  private:
-  const int kOptVal = 1;
   enum { kRecvRequest, kSendRequest, kRecvResponse, kSendResponse };
 
   void SetFDs(fd_set *read_fds, fd_set *write_fds);
