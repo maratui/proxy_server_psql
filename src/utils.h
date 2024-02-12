@@ -1,5 +1,5 @@
-#ifndef TCP_PROXY_SERVER_UTILS_H_
-#define TCP_PROXY_SERVER_UTILS_H_
+#ifndef PROXY_SERVER_PSQL_UTILS_H_
+#define PROXY_SERVER_PSQL_UTILS_H_
 
 #include <cstring>
 #include <fstream>
@@ -12,4 +12,4 @@ void CheckResult(int result, const std::string& log_text);
 void ExitWithLog(const std::string& log_text);
 }  // namespace utils
 
-#endif  // TCP_PROXY_SERVER_UTILS_H_
+#endif  // PROXY_SERVER_PSQL_UTILS_H_

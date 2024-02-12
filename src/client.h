@@ -1,5 +1,5 @@
-#ifndef TCP_PROXY_SERVER_CLIENT_H_
-#define TCP_PROXY_SERVER_CLIENT_H_
+#ifndef PROXY_SERVER_PSQL_CLIENT_H_
+#define PROXY_SERVER_PSQL_CLIENT_H_
 
 #include <netinet/in.h>
 #include <sys/socket.h>
@@ -49,4 +49,4 @@ class Client {
   long unsigned query_message_length_ = 0LU;
 };
 
-#endif  // TCP_PROXY_SERVER_CLIENT_H_
+#endif  // PROXY_SERVER_PSQL_CLIENT_H_

@@ -1,5 +1,5 @@
-#ifndef TCP_PROXY_SERVER_PROXY_SERVER_H_
-#define TCP_PROXY_SERVER_PROXY_SERVER_H_
+#ifndef PROXY_SERVER_PSQL_PROXY_SERVER_H_
+#define PROXY_SERVER_PSQL_PROXY_SERVER_H_
 
 #include <fcntl.h>
 #include <netinet/in.h>
@@ -41,4 +41,4 @@ class ProxyServer {
 };
 }  // namespace tcp
 
-#endif  // TCP_PROXY_SERVER_PROXY_SERVER_H_
+#endif  // PROXY_SERVER_PSQL_PROXY_SERVER_H_
